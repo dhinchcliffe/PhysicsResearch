@@ -1,0 +1,91 @@
+CYCLE 01: WHAT WOULD THE EXPERIMENT ACTUALLY MEASURE?
+17 October 2026 | Reproduction and preliminary model audit, not a discovery.
+
+The first result is an operational question rather than a new theory: can we
+measure a pattern of joint quantum correlations that exceeds what a specified
+classical communication model allows, without mistaking another force, a
+preparation artifact, or an inappropriate approximation for quantum gravity?
+
+The simple experiment has two masses and four joint paths. Each mass starts in
+an equal superposition of left and right. Gravity contributes a different phase
+(a quantum wave's angle) to LL, LR, RL and RR. Only a joint phase combination,
+Delta = phi_LL + phi_RR - phi_LR - phi_RL, can entangle this ideal initial state.
+A phase belonging to A alone, B alone, or all branches together cancels out.
+Merely counting the four paths would see 25% each even when the state entangles.
+Sources S01, S16–S19 establish the underlying framework; our code reproduces the
+static, finite-dimensional calculation, not an entire interferometer.
+
+A WORKED NUMERICAL EXAMPLE
+Take two 10^-14 kg point masses, a centre separation of 450 micrometres, two
+paths per mass separated by 250 micrometres, and a 2.5-second static hold. These
+are illustrative assumptions, not equipment specifications we have achieved.
+The branch separations are 450, 700, 200 and 450 micrometres. The calculated
+joint phase is -0.313934 radians, concurrence 0.156323 and negativity 0.078162.
+Concurrence ranges from 0 to 1; negativity for two qubits ranges from 0 to 0.5.
+Both measure entanglement here, with different normalization.
+
+A THREE-SETTING READOUT
+After calibrated local rotations, use fresh mass pairs to measure XX, YY and ZZ
+spin correlations. X, Y and Z label three perpendicular spin measurement axes,
+not three different gravitational forces. Each correlation is the average of
+the product of two outcomes, each +1 or -1. Form S = <XX> - <YY> + <ZZ>.
+Every separable two-qubit state has S <= 1 under the trusted-measurement
+assumptions. This is an entanglement witness, not a Bell/device-independent test.
+
+For the example above, suppose ordinary independent dephasing retains 95% of
+each branch coherence. The calculated S is 1.199515, with negativity 0.049879.
+The equal-noise family loses detectable entanglement at retention 0.855821.
+95% is an assumption to test, not an experimental achievement. The package
+contains every four-outcome probability for all three settings and a conditional
+sampling bound. This does not establish instrument fidelity or running time.
+
+FIRST EASY OPPONENT, THEN A HARDER ONE
+The projected Kafri–Taylor–Milburn classical-channel benchmark ties force to
+sufficient decoherence to keep our initially separable masses unentangled (S02).
+We reproduced that behavior and its analytic boundary. It is not the strongest
+currently viable competitor: particular pairwise extensions have already faced
+experimental constraints (S21).
+
+We also implemented the Gaussian-smeared Diósi–Penrose dynamics analyzed by
+Trillo and Navascués (S05). Our computation reproduces their two limiting distance
+ratios, 0.850872 and 2.210928, and an explicit case that DOES entangle. The code
+uses both the direct solution and a independently reconstructed Lindblad
+propagator. Thus our framework now includes a mathematically harder opponent.
+That does not establish the model's classical interpretation or physical
+viability. The example's cutoff length and particle geometry must face existing
+constraints. Aspelmeyer's 2026 paper argues actual table-top constraints change
+the collapse-model conclusion (S20); that is the next mandatory audit.
+
+TWO TRAPS WE CAN NOW CATCH
+First, an approximation that assumes path splitting is much smaller than the
+centre separation underestimates the phase by 30.9% in our illustrative geometry.
+Using exact gravity for one model and this approximation for another could
+manufacture a model difference. At a splitting/separation ratio of 0.1, the
+error is 1%. We must match approximation regimes before comparing theories.
+
+Second, lost single-particle interference is not automatically environmental
+decoherence. Entanglement itself can remove it. In this family the visibility is
+lambda * |cos(Delta/2)|, not lambda. At phase pi it vanishes even without noise.
+A noise-control experiment must therefore isolate the noise channel rather than
+read off its strength from a single final visibility measurement.
+
+A CORRECTION TO THE INITIAL CHARTER
+The Aziz–Howl Nature result was presented too confidently. Direct rebuttals
+contest its dynamics and/or attribute its apparent entanglement to quantum matter
+exchange, not a classical gravitational mediator (S04, S14, S15, S22). The
+conditional local-mediator witness has not simply been overturned. We must keep
+the mathematical prediction, subsystem choice, mediation assumptions and
+experimental inference separate. These full QFT arguments are not yet reproduced.
+
+WHAT IS COMPLETE
+970 numerical/property/unit checks pass. Known formulas, selected classical-
+channel behavior and the harder DP example are reproduced. Five reproducible
+figures and source/claim registries are saved. There is a first operational
+readout, but no complete robust discriminator against all viable alternatives.
+
+WHAT IS NOT COMPLETE
+No apparatus model, new experiment, full viability scan, novelty claim, external
+physics review, or Lean-kernel verification. GitHub remote creation is blocked by
+the available connector action set; the local Git package preserves the work.
+The next gate is to determine which harder models survive physical constraints,
+then compare full readout distributions in the SAME realizable geometry.

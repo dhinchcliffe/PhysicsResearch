@@ -1,0 +1,137 @@
+CYCLE 01 TECHNICAL NOTE
+All results below concern specified finite-dimensional reductions. They are not
+proofs about all classical theories or the fundamental nature of spacetime.
+
+1. BRANCH-PHASE MODEL
+Basis (LL, LR, RL, RR). Orthogonal, sharply localized branches; fixed positions;
+weak field, nonrelativistic Newton interaction; no packet spreading, overlap,
+spin-motion error, free-fall motion, non-gravitational forces or readout error.
+A=(-s/2,+s/2), B=(d-s/2,d+s/2), d>s>0. Equal splitting, possibly unequal masses.
+V_ij=-G m_A m_B/r_ij, so phi_ij=-V_ij t/hbar=+G m_A m_B t/(hbar r_ij).
+The state is psi=(exp(i phi_00),exp(i phi_01),exp(i phi_10),exp(i phi_11))/2.
+For a normalized pure two-qubit state (a,b,c,d), C=2|ad-bc| (S16).
+Thus C=|sin(Delta/2)|, Delta=phi_00+phi_11-phi_01-phi_10, and N=C/2.
+The partial transpose has eigenvalues equal to the squared Schmidt coefficients
+and plus/minus their product. Its negative eigenvalue supplies N (S17,S18).
+
+Adding local branch phases alpha_i+beta_j cancels in Delta. A nonzero global
+phase does not affect rho. All path populations equal 1/4 independently of Delta.
+These facts prevent incorrect witnesses based only on path counting.
+
+For the inline geometry:
+Delta = -(2 G m_A m_B t s^2)/(hbar d(d^2-s^2)).
+The exact positive rate Omega=|Delta|/t equals Omega_quad/(1-(s/d)^2), with
+Omega_quad=2Gm_A m_B s^2/(hbar d^3). Thus the relative quadratic underestimate,
+1 - Omega_quad/Omega, is exactly (s/d)^2. This is an elementary identity,
+not a novel discovery or an error claimed in a published paper.
+
+2. INDEPENDENT LOCAL DEPHASING
+A coherence connecting two different branches of A is multiplied by lambda_A;
+likewise for B. Factors lie in [0,1]. This is a completely positive channel,
+not a standalone theory of gravity. The canonical phase-equivalent state is
+(1,1,1,exp(i Delta))/2. Ordinary local phase corrections commute with dephasing.
+Let a=lambda_A, b=lambda_B, q=sin^2(Delta/2). The four eigenvalues of rho^(T_B) are
+ [1-ab +/- sqrt((a-b)^2+4abq)]/4,
+ [1+ab +/- sqrt((a+b)^2-4abq)]/4.
+Only the minus member of the first pair can be negative. Entanglement is present
+exactly when 4abq > (1-a^2)(1-b^2), for this family. For a=b=lambda,
+ N=max(0,[lambda^2+2lambda|sin(Delta/2)|-1]/4).
+We compare these expressions with matrix eigensolvers, including endpoints and
+random choices, not just one favorable case. The symbolic characteristic
+polynomial is additionally checked at Delta=pi.
+
+3. A MEASURABLE WITNESS
+In calibrated local frames define Wscore=XX-YY+ZZ, and S=Tr(rho Wscore).
+For a product state with Bloch vectors a,b (length <=1), S=a_x b_x-a_y b_y+a_z b_z.
+Reflection preserves the length of b; Cauchy–Schwarz gives S<=1. A separable
+mixture is a convex combination of such products, so the same ceiling holds.
+Equivalently, Wscore=4|Phi+><Phi+|-I, whose separable overlap is at most 1/2.
+This is a standard Bell-state witness after local basis changes, not an assertion
+of a new witness or a device-independent Bell inequality.
+
+For the canonical target phase delta=Delta modulo 2pi, set
+P=diag(1,exp(-i delta/2)), H=Hadamard, R=diag(1,-i), U=(RHP) tensor (HP).
+U puts the ideal state into Schmidt form, up to a global phase. In these frames,
+for equal independent local dephasing,
+S=lambda^2+2lambda|sin(Delta/2)|, hence N=max(0,(S-1)/4).
+The relation between S and N is exact only for this target/noise family; the
+separable ceiling is general. Use fresh prepared pairs for each setting.
+
+The experiment needs initial-separability checks, trusted local rotations and
+readout, no undocumented postselection, and electromagnetic/matter-exchange
+controls. S>1 establishes entanglement under those assumptions, not its cause.
+A measured S<=1 is inconclusive outside the specified state/noise family.
+For a universal state diagnosis beyond this family, use richer tomography or
+an appropriately optimized witness, retaining the same source-isolation burden.
+
+The reduced single-mass interference visibility is V_A=lambda_A|cos(Delta/2)|.
+Consequently V_A is not a direct noise-meter. Entanglement can reduce it to zero.
+A control with the interaction disabled or canceled, while keeping environmental
+couplings otherwise matched, would be needed to identify lambda operationally;
+perfect cancellation/control equivalence is an unproven apparatus assumption.
+
+4. CONDITIONAL SAMPLING BOUND
+For n independent +/-1 outcomes per each of three preselected settings,
+Hoeffding gives Pr(S_hat-E[S_hat]>=e)<=exp(-n e^2/6).
+Let alpha be the tolerated false-positive probability. A conservative one-sided
+statistical margin is sqrt(6 log(1/alpha)/n). Add a separately bounded systematic
+bias B, not a fitted after-the-fact allowance. To have false-negative probability
+at most beta for a guaranteed implemented mean S0, it suffices that
+n >= 6*(sqrt(log(1/alpha))+sqrt(log(1/beta)))^2 / (S0-1-B)^2.
+The illustrative S0=1.199514576, B=.03, alpha=.001, beta=.05 gives 3968 pairs
+PER setting (11,904 total). This is a conditional planning bound, not a feasibility
+forecast. Drift, uncertainty in the mean, failed preparations, finite coherence
+and unbounded systematics invalidate a naive interpretation as required lab time.
+
+5. PROJECTED KAFRI–TAYLOR–MILBURN BENCHMARK
+Source S02, Eq.(16): interaction K x1 x2 and noise
+-K/(2hbar) sum_j [x_j,[x_j,rho]], with K=2Gm_A m_B/d^3.
+Restrict to static positions x_j=+/-s/2. Then Omega_quad=K s^2/hbar and local
+coherence decays at gamma=Omega_quad/2. Thus lambda=exp(-|Delta|/2).
+The entanglement condition becomes |sin(tau/2)|>sinh(tau/2), tau>=0,
+which is impossible since |sin x|<=x<=sinh x. The initial product state stays
+separable in this restriction. This reproduces a classical-channel benchmark,
+not all oscillator dynamics or every stochastic classical-quantum theory.
+
+6. GAUSSIAN DP MODEL: AN EXPLICIT HARDER OPPONENT
+Source S05, arXiv:2411.02287v2 Eqs.(10)–(14),(20),(22),(23).
+In length units sigma, f(r)=erf(r/2)/r and f(0)=1/sqrt(pi).
+For four configurations a,b, F_ab=sum_jk f(|x_aj-x_bk|), including self terms.
+Time u=Gm^2 t/(2hbar sigma). With no free motion,
+ g_ab=(i-1)F_aa+(-i-1)F_bb+2F_ab,
+ rho_ab(u)=rho_ab(0) exp(u g_ab).
+Real decay terms are correlated mass-density noise; replacing them by independent
+single-qubit noise would be the WRONG model. F is a positive Gram kernel. An
+independent Lindblad construction uses H=diag(-F_aa) and diagonal jumps derived
+from its eigenpairs, L_j=diag(sqrt(2 w_j) v_j). This tests the implemented channel's
+complete positivity, not whether its gravitational mediator is classical/local.
+
+Inline positions A=(0,L), B=(d+L,d+2L). Here d is the closest branch GAP; it is NOT
+the centre distance denoted d in section 1. Centre separation here is d+L.
+The initial partial-transpose derivative has lowest eigenvalue (in units of u)
+ e_minus=f(0)-f(L)-|f(d+2L)+f(d)-2f(d+L)|/sqrt(2).
+The transverse expression replaces the last term by
+ sqrt(2)*(f(d)-f(sqrt(d^2+L^2))).
+We independently find the published limiting ratios 0.850872256263 and
+2.210927620647 and the negative-onset example d=3/8,L=1/8.
+For that example e_minus=-0.00019156399557468247709565899381454...
+Direct evolution gives N(u=1)=0.000191459700054247 and a numerical peak
+N=0.042844724 at u=407.928587. These are reproductions/derived sample outputs,
+not novelty claims. The plot compares with the SAME softened Hamiltonian without
+collapse noise, not with point-Newton gravity at unmatched force coupling.
+
+CRITICAL VIABILITY GATE
+Sigma must not be selected solely to fit the desired outcome. Force-law, heating,
+collapse and finite-body constraints must be applied first. The branch-localized
+particle reduction does not establish that an actual neutral massive object can
+obey these parameters, fit a shielding geometry and preserve coherence.
+S08 disputes the locality interpretation; S20 argues actual table-top constraints
+remove the purported collapse-model loophole. Both require explicit assessment.
+
+7. VALIDATION INVENTORY AND LIMITS
+See tests and results/pytest.xml for actual counts. Cross-checks include singular
+values, density matrices, partial transposes, characteristic polynomials, separate
+16x16 matrix-exponential propagators, random separable controls, limiting cases,
+positivity/trace/Hermiticity, and high-precision scalar evaluation.
+Formal Lean status: DRAFT ONLY, not executed. Proof tools certify encoded
+mathematical statements, not the physical adequacy of an assumed model.

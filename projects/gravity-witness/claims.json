@@ -1,0 +1,199 @@
+{
+  "cycle": "01",
+  "claims": [
+    {
+      "id": "GW-C001",
+      "claim": "C=|sin(Delta/2)| and N=C/2 for the equal-amplitude pure four-branch state",
+      "status": "REPRODUCED",
+      "sources": [
+        "S01",
+        "S16",
+        "S17",
+        "S18"
+      ],
+      "evidence_paths": [
+        "gw.py",
+        "test_gw.py",
+        "results/cycle01.json"
+      ],
+      "assumptions": "Orthogonal static branches; normalized pure state",
+      "limitations": "Not a proof of gravitational mediator ontology.",
+      "external_review": false,
+      "lean_kernel_checked": false
+    },
+    {
+      "id": "GW-C002",
+      "claim": "Arbitrary local dephasing retentions give the stated partial-transpose spectrum",
+      "status": "DERIVED_AND_NUMERICALLY_CROSS_CHECKED",
+      "sources": [
+        "S17",
+        "S18"
+      ],
+      "evidence_paths": [
+        "gw.py:partial_transpose_spectrum",
+        "test_gw.py"
+      ],
+      "assumptions": "Canonical phase state and independent Z dephasing",
+      "limitations": "Not an arbitrary mixed-state formula; no novelty claim.",
+      "external_review": false,
+      "lean_kernel_checked": false
+    },
+    {
+      "id": "GW-C003",
+      "claim": "Calibrated XX-YY+ZZ has separable ceiling 1; in the equal-noise family S=lambda^2+2lambda|sin(Delta/2)|",
+      "status": "ANALYTICALLY_DERIVED_AND_NUMERICALLY_CROSS_CHECKED",
+      "sources": [],
+      "evidence_paths": [
+        "notes/derivations.txt",
+        "gw.py:phase_calibrated_score",
+        "test_gw.py"
+      ],
+      "assumptions": "Trusted orthogonal local axes; correct state preparation/readout",
+      "limitations": "Standard Bell-state witness in local frames. No claim of a new witness, device independence, or gravitational source isolation.",
+      "external_review": false,
+      "lean_kernel_checked": false
+    },
+    {
+      "id": "GW-C004",
+      "claim": "Quadratic inline phase underestimates exact point-Newton phase by (s/d)^2",
+      "status": "SYMBOLICALLY_AND_NUMERICALLY_CHECKED",
+      "sources": [],
+      "evidence_paths": [
+        "run_cycle01.py",
+        "results/cycle01.json"
+      ],
+      "assumptions": "Inline prescribed geometry d>s>0",
+      "limitations": "An elementary approximation guard, not a paper-error claim.",
+      "external_review": false,
+      "lean_kernel_checked": false
+    },
+    {
+      "id": "GW-C005",
+      "claim": "Static-branch KTM benchmark cannot entangle the specified product input",
+      "status": "REPRODUCED",
+      "sources": [
+        "S02"
+      ],
+      "evidence_paths": [
+        "gw.py:ktm_projected",
+        "test_gw.py",
+        "notes/derivations.txt"
+      ],
+      "assumptions": "Source Eq.16 and consistent quadratic coupling",
+      "limitations": "Does not cover all hybrid gravity or full oscillator dynamics; benchmark has constrained extensions.",
+      "external_review": false,
+      "lean_kernel_checked": false
+    },
+    {
+      "id": "GW-C006",
+      "claim": "Selected Gaussian DP dynamics produces an entangling example and the published limiting distance ratios",
+      "status": "REPRODUCED",
+      "sources": [
+        "S05"
+      ],
+      "evidence_paths": [
+        "dp.py",
+        "test_dp.py",
+        "run_dp.py",
+        "results/dp_reproduction.json"
+      ],
+      "assumptions": "Static Gaussian-smeared equal masses; no finite-body/free evolution",
+      "limitations": "Classical/local interpretation disputed; example not established physically viable.",
+      "external_review": false,
+      "lean_kernel_checked": false
+    },
+    {
+      "id": "GW-C007",
+      "claim": "The Aziz-Howl classical-gravity entanglement interpretation is disputed in direct primary rebuttals",
+      "status": "DISPUTED",
+      "sources": [
+        "S04",
+        "S14",
+        "S15",
+        "S22"
+      ],
+      "evidence_paths": [
+        "notes/model_audit.txt"
+      ],
+      "assumptions": "Compare specified subsystem partitions and allowed matter propagation",
+      "limitations": "Full QFT calculations not reproduced; no consensus claim.",
+      "external_review": false,
+      "lean_kernel_checked": false
+    },
+    {
+      "id": "GW-C008",
+      "claim": "The DP physical-constraint loophole is unsettled in this project",
+      "status": "OPEN",
+      "sources": [
+        "S05",
+        "S08",
+        "S20"
+      ],
+      "evidence_paths": [
+        "notes/next_cycle.txt"
+      ],
+      "assumptions": "Apply existing cutoff/force/heating/finite-body/shielding constraints",
+      "limitations": "No viable experimental region yet certified.",
+      "external_review": false,
+      "lean_kernel_checked": false
+    },
+    {
+      "id": "GW-C009",
+      "claim": "970 parameterized checks passed in the local Python environment",
+      "status": "EXECUTED",
+      "sources": [],
+      "evidence_paths": [
+        "results/pytest.xml",
+        "results/pytest.txt"
+      ],
+      "assumptions": "Installed environment in results/environment.json",
+      "limitations": "Not 970 proofs or independent expert reviews; GitHub CI not run.",
+      "external_review": false,
+      "lean_kernel_checked": false
+    },
+    {
+      "id": "GW-C010",
+      "claim": "Lean draft exists but is not kernel-verified",
+      "status": "NOT_EXECUTED",
+      "sources": [],
+      "evidence_paths": [
+        "formal/GravityWitness.lean",
+        "formal/README.txt"
+      ],
+      "assumptions": "Lean/mathlib unavailable",
+      "limitations": "No formal proof claims allowed.",
+      "external_review": false,
+      "lean_kernel_checked": false
+    },
+    {
+      "id": "GW-C011",
+      "claim": "Single-particle visibility lambda|cos(Delta/2)| must not be confused with noise retention lambda",
+      "status": "DERIVED_AND_NUMERICALLY_CROSS_CHECKED",
+      "sources": [],
+      "evidence_paths": [
+        "gw.py:reduced_a",
+        "test_gw.py",
+        "results/cycle01.json"
+      ],
+      "assumptions": "Equal-amplitude phase state with local dephasing",
+      "limitations": "Real apparatus visibility also includes preparation, overlap and readout effects.",
+      "external_review": false,
+      "lean_kernel_checked": false
+    },
+    {
+      "id": "GW-C012",
+      "claim": "3968 trials per setting suffice for the stated conditional Hoeffding planning example",
+      "status": "DERIVED_AND_NUMERICALLY_CHECKED",
+      "sources": [],
+      "evidence_paths": [
+        "gw.py:planning_trials",
+        "notes/derivations.txt",
+        "results/cycle01.json"
+      ],
+      "assumptions": "Guaranteed implemented mean, iid, fixed n, no postselection, specified systematic bound",
+      "limitations": "Not experimental feasibility or a prediction of laboratory runtime.",
+      "external_review": false,
+      "lean_kernel_checked": false
+    }
+  ]
+}

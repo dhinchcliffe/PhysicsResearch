@@ -1,0 +1,27 @@
+{
+  "source": "arXiv:2411.02287v2, Eqs.10-14,20,22,23",
+  "scope": "equal masses; static four-branch subspace; Gaussian cutoff; not a finite-body apparatus model",
+  "interpretation": "mathematical predictions reproduced; classical/local interpretation and empirical viability not established",
+  "units": {
+    "length": "sigma",
+    "time": "u = G*m^2*t/(2*hbar*sigma)"
+  },
+  "limiting_distances": {
+    "inline_small_split_gap_over_sigma": 0.8508722562631659,
+    "transverse_large_split_gap_over_sigma": 2.210927620647473
+  },
+  "example": {
+    "gap_over_sigma": 0.375,
+    "split_over_sigma": 0.125,
+    "onset_eigenvalue_per_unit_u": -0.0001915639955746825,
+    "onset_high_precision": "-0.0001915639955746824770956589938145427186525613544858967449",
+    "paper_printed_onset": -0.0001915,
+    "printed_number_absolute_difference": 6.399557468247709e-08,
+    "negativity_at_u_1": 0.00019145970005424702,
+    "numerical_peak_u": 407.9285872556609,
+    "numerical_peak_negativity": 0.042844724244786574,
+    "matched_hamiltonian_phase_rate_per_unit_u": 0.0026172164907860562
+  },
+  "fair_comparison_note": "The plotted unitary control shares the DP-softened Hamiltonian. It is NOT point-Newton gravity; softening must separately face force-law constraints.",
+  "viability_gate": "Compare sigma and finite-body/shielding assumptions with laboratory constraints before treating this as a viable competing experiment model."
+}

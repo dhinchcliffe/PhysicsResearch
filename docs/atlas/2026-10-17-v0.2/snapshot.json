@@ -1,0 +1,46 @@
+{
+  "source_title": "Project Gravity Witness \u2014 Research Atlas & Charter (v0.2)",
+  "document_id": "1rkQ5z3phVVdCVBP6Obtn3HBA1U6YbQ9L78HwgeqdGAc",
+  "source_url": "https://docs.google.com/document/d/1rkQ5z3phVVdCVBP6Obtn3HBA1U6YbQ9L78HwgeqdGAc",
+  "revision_id": "AHj4eMRcSCKX82bwv6Z0t8muDdCp08nWI0zYcfRI51mUZ5qVRmFSixJ0ye2ty0mHgSsKG5CsWzT09QWfoWPiS3lCH7wKlv0IpTaxLdKX6xk",
+  "exported_at_utc": "2026-10-17T09:30:13Z",
+  "tabs": [
+    {
+      "id": "t.q5e9ydjw0gsh",
+      "title": "Cycle 01 \u2014 Results & learning"
+    },
+    {
+      "id": "t.0",
+      "title": "Charter & foundations"
+    }
+  ],
+  "files": {
+    "atlas.pdf": "62165635a348aff1a616c4ae59fb43b030585aef70578a1c41021315dc760ee0",
+    "google-export.md": "9ed1928624a1d09885ee192d780eac6d98dc0c50a6cd812e7160da3071877c73",
+    "atlas.md": "a22fc7e695f8a6a536433c88bdf5968ea1712296913bce900333793edbf3f1f2"
+  },
+  "normalization": "Only inline base64 image reference definitions replaced with relative asset paths. Narrative and equations unchanged.",
+  "images": [
+    {
+      "label": "image1",
+      "file": "assets/image1.png",
+      "sha256": "cb0698ac516e0790563e9929f38e443f2c6b4520381b9bedfaa23984ce1e3de7"
+    },
+    {
+      "label": "image2",
+      "file": "assets/image2.png",
+      "sha256": "ef592af2a7a5a3522e4578e1e2aebd44666cf1bce258c22f2b326787f51c2e0d"
+    },
+    {
+      "label": "image3",
+      "file": "assets/image3.png",
+      "sha256": "864cc1306c54d77f7c20f39c35fc6a54dbd97e59b7dc96def9d88080e8064a20"
+    },
+    {
+      "label": "image4",
+      "file": "assets/image4.png",
+      "sha256": "c1f42b7c49cf9c8de2174a7d77efcb6ea9240cc16ee314a26f0869027a5e779c"
+    }
+  ],
+  "historical_status_note": "The snapshot predates the PhysicsResearch import. Statements about the unavailable gravity-witness remote describe Cycle 01, not the current repository."
+}

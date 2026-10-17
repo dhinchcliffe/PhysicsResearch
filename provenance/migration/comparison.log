@@ -1,0 +1,2 @@
+PASS: all numeric JSON fields and both CSV datasets agree with Cycle 01.
+Tolerance: rtol=1e-9, atol=1e-12. Figure pixels and metadata are not compared.

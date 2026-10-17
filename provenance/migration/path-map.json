@@ -1,0 +1,228 @@
+{
+  "dp.py": {
+    "location": "projects/gravity-witness/src/gravity_witness/dp.py",
+    "original_sha256": "ccdd8634f1f073b4fa362ae1b530a8a082e747f6239e6d249f066ef59415b94a",
+    "repository_sha256": "58b103c1944c1165df415473ee1f33520d84337d57934b47fd09e88c7935eb3c",
+    "byte_identical": false
+  },
+  "MANIFEST.json": {
+    "location": "provenance/cycle01/MANIFEST.json",
+    "original_sha256": "f0cbb359db79f86c96eda91fbc3bce936f9691a91bbc6fde68adea507beb4e24",
+    "repository_sha256": "f0cbb359db79f86c96eda91fbc3bce936f9691a91bbc6fde68adea507beb4e24",
+    "byte_identical": true
+  },
+  "gw.py": {
+    "location": "projects/gravity-witness/src/gravity_witness/gw.py",
+    "original_sha256": "8127b751ddf50192cf56e2151ef45ddbbd9dd98d0460effba3836f4fba063add",
+    "repository_sha256": "8127b751ddf50192cf56e2151ef45ddbbd9dd98d0460effba3836f4fba063add",
+    "byte_identical": true
+  },
+  "requirements.lock": {
+    "location": "requirements.lock",
+    "original_sha256": "ac5b0ccb98e487caff3df748166e68eeb15247c8a4e4ff28bc7cef013f312950",
+    "repository_sha256": "ac5b0ccb98e487caff3df748166e68eeb15247c8a4e4ff28bc7cef013f312950",
+    "byte_identical": true
+  },
+  "sources.json": {
+    "location": "projects/gravity-witness/sources.json",
+    "original_sha256": "21c4fe79cf1947813cb6b51bf394317c4ef6c2ccb77e45482f54a5dbbe182ed2",
+    "repository_sha256": "21c4fe79cf1947813cb6b51bf394317c4ef6c2ccb77e45482f54a5dbbe182ed2",
+    "byte_identical": true
+  },
+  "test_dp.py": {
+    "location": "projects/gravity-witness/tests/test_dp.py",
+    "original_sha256": "2e9ac253658e49b2ab32b444274ff6b49c14047d69ec34f87a669ebb5cbd7367",
+    "repository_sha256": "a155c53b3ad640f2ce4e6984710335c9f519c190013487834a8bf5063297fd47",
+    "byte_identical": false
+  },
+  "run_cycle01.py": {
+    "location": "projects/gravity-witness/scripts/run_cycle01.py",
+    "original_sha256": "9ca3e1bf559980457a51932da7844ad2ed8ea5556e0f820b6771c1201d2be68f",
+    "repository_sha256": "46fd89b66d43c2096f6e915d275d24ab2960280896f026ab81454f7da51a87e1",
+    "byte_identical": false
+  },
+  "README.txt": {
+    "location": "provenance/cycle01/README.txt",
+    "original_sha256": "d5896b6869afc03d9c41801f2300adae2440cb34c1f0e9fbb076b4292feedf7a",
+    "repository_sha256": "d5896b6869afc03d9c41801f2300adae2440cb34c1f0e9fbb076b4292feedf7a",
+    "byte_identical": true
+  },
+  "run_dp.py": {
+    "location": "projects/gravity-witness/scripts/run_dp.py",
+    "original_sha256": "b76d37ea06e2c449b7ca529cc131bec6b4b52ca0d7d188582379c3dc68904ba8",
+    "repository_sha256": "6f0e74e2729c12c4aab5e255a97592bf0de46c8e7b1a41be0f21e01f6c4ce74e",
+    "byte_identical": false
+  },
+  "claims.json": {
+    "location": "projects/gravity-witness/claims.json",
+    "original_sha256": "a8bdb1889cf725d6ad4a500b8f38a0d64a281848796c9ae669bbadc71c5bf576",
+    "repository_sha256": "a8bdb1889cf725d6ad4a500b8f38a0d64a281848796c9ae669bbadc71c5bf576",
+    "byte_identical": true
+  },
+  "history.bundle": {
+    "location": "provenance/cycle01/history.bundle",
+    "original_sha256": "af52d32423631624adaceb931522eab75d886b14f780e720f3bec03f0bc0b40b",
+    "repository_sha256": "af52d32423631624adaceb931522eab75d886b14f780e720f3bec03f0bc0b40b",
+    "byte_identical": true
+  },
+  "test_gw.py": {
+    "location": "projects/gravity-witness/tests/test_gw.py",
+    "original_sha256": "b27aac9e61a9ead006ba8bf4e3deddc085ffa73517d97eaffa2a701ed872917f",
+    "repository_sha256": "1e983846011da5b08d63a9b99451d82fff290af28c6c4a6acddf45b191f064f8",
+    "byte_identical": false
+  },
+  ".gitignore": {
+    "location": "archives/gravity-witness-cycle01.zip!gravity-witness/.gitignore",
+    "preserved": "original archive"
+  },
+  "figures/05_calibrated_readout.png": {
+    "location": "projects/gravity-witness/figures/cycle01/05_calibrated_readout.png",
+    "original_sha256": "7728e8e780e6f9985beae9e5055df2e20ba5682fdb48a0ff621a7edc19bffd87",
+    "repository_sha256": "7728e8e780e6f9985beae9e5055df2e20ba5682fdb48a0ff621a7edc19bffd87",
+    "byte_identical": true
+  },
+  "figures/01_entanglement_and_noise.png": {
+    "location": "projects/gravity-witness/figures/cycle01/01_entanglement_and_noise.png",
+    "original_sha256": "2d2db8ae5103c2312f96983df3410600fbba87c48ecae4cfe0f172720dcd5ab9",
+    "repository_sha256": "2d2db8ae5103c2312f96983df3410600fbba87c48ecae4cfe0f172720dcd5ab9",
+    "byte_identical": true
+  },
+  "figures/04_dp_countermodel.png": {
+    "location": "projects/gravity-witness/figures/cycle01/04_dp_countermodel.png",
+    "original_sha256": "7849005e1ae3710eb2eef7228230d2d30f3eecc5959dfb055bd758a7d3aa2e49",
+    "repository_sha256": "7849005e1ae3710eb2eef7228230d2d30f3eecc5959dfb055bd758a7d3aa2e49",
+    "byte_identical": true
+  },
+  "figures/03_approximation_guard.png": {
+    "location": "projects/gravity-witness/figures/cycle01/03_approximation_guard.png",
+    "original_sha256": "94dfb0668caa90e44953f8ad94263094006ae324c2ec82f4f33ca825c9403164",
+    "repository_sha256": "94dfb0668caa90e44953f8ad94263094006ae324c2ec82f4f33ca825c9403164",
+    "byte_identical": true
+  },
+  "figures/02_witness_threshold.png": {
+    "location": "projects/gravity-witness/figures/cycle01/02_witness_threshold.png",
+    "original_sha256": "e20775e78d6915d16454a60ca16824a766953506f5aad6474556ca59eaad56d6",
+    "repository_sha256": "e20775e78d6915d16454a60ca16824a766953506f5aad6474556ca59eaad56d6",
+    "byte_identical": true
+  },
+  "formal/GravityWitness.lean": {
+    "location": "projects/gravity-witness/formal/GravityWitness.lean",
+    "original_sha256": "87594e04a976b0e3d9ccf6879cdfb8d14de5b1fdca52ff47c391f7c479dac9ba",
+    "repository_sha256": "87594e04a976b0e3d9ccf6879cdfb8d14de5b1fdca52ff47c391f7c479dac9ba",
+    "byte_identical": true
+  },
+  "formal/README.txt": {
+    "location": "projects/gravity-witness/formal/README.txt",
+    "original_sha256": "53f78e7d9c35ce1eb0c1de63a71aecbe5572c2e89d2c2871da1961fc646ac9ac",
+    "repository_sha256": "53f78e7d9c35ce1eb0c1de63a71aecbe5572c2e89d2c2871da1961fc646ac9ac",
+    "byte_identical": true
+  },
+  "formal/lakefile.toml": {
+    "location": "projects/gravity-witness/formal/lakefile.toml",
+    "original_sha256": "d7c5ee2759dee8cc30ddd37bf02e84270d1746458f140e6c12d80422a93f6490",
+    "repository_sha256": "d7c5ee2759dee8cc30ddd37bf02e84270d1746458f140e6c12d80422a93f6490",
+    "byte_identical": true
+  },
+  "formal/lean-toolchain": {
+    "location": "projects/gravity-witness/formal/lean-toolchain",
+    "original_sha256": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea",
+    "repository_sha256": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea",
+    "byte_identical": true
+  },
+  "results/run_dp.log": {
+    "location": "projects/gravity-witness/results/cycle01/run_dp.log",
+    "original_sha256": "945149577c33f1d0b001e8b1a30b382b1ec08e1cff2db43c3a6a1c0a948b2230",
+    "repository_sha256": "945149577c33f1d0b001e8b1a30b382b1ec08e1cff2db43c3a6a1c0a948b2230",
+    "byte_identical": true
+  },
+  "results/environment.json": {
+    "location": "projects/gravity-witness/results/cycle01/environment.json",
+    "original_sha256": "c94c2f801701baee54e61597ced599d0739d31cb80f73febaf61054363388f45",
+    "repository_sha256": "c94c2f801701baee54e61597ced599d0739d31cb80f73febaf61054363388f45",
+    "byte_identical": true
+  },
+  "results/negativity_vs_phase.csv": {
+    "location": "projects/gravity-witness/results/cycle01/negativity_vs_phase.csv",
+    "original_sha256": "3eac9cd16b969d359bd832eaa3a7f62b2ab498440e4651e923a4782d26a6a90e",
+    "repository_sha256": "3eac9cd16b969d359bd832eaa3a7f62b2ab498440e4651e923a4782d26a6a90e",
+    "byte_identical": true
+  },
+  "results/cycle01.json": {
+    "location": "projects/gravity-witness/results/cycle01/cycle01.json",
+    "original_sha256": "ae3e5f56d83f6777cd92d8347dd348c17848c74f9f749d786d54b993ee05c7c3",
+    "repository_sha256": "ae3e5f56d83f6777cd92d8347dd348c17848c74f9f749d786d54b993ee05c7c3",
+    "byte_identical": true
+  },
+  "results/dp_reproduction.json": {
+    "location": "projects/gravity-witness/results/cycle01/dp_reproduction.json",
+    "original_sha256": "945149577c33f1d0b001e8b1a30b382b1ec08e1cff2db43c3a6a1c0a948b2230",
+    "repository_sha256": "945149577c33f1d0b001e8b1a30b382b1ec08e1cff2db43c3a6a1c0a948b2230",
+    "byte_identical": true
+  },
+  "results/run_cycle01.log": {
+    "location": "projects/gravity-witness/results/cycle01/run_cycle01.log",
+    "original_sha256": "ae3e5f56d83f6777cd92d8347dd348c17848c74f9f749d786d54b993ee05c7c3",
+    "repository_sha256": "ae3e5f56d83f6777cd92d8347dd348c17848c74f9f749d786d54b993ee05c7c3",
+    "byte_identical": true
+  },
+  "results/pytest.xml": {
+    "location": "projects/gravity-witness/results/cycle01/pytest.xml",
+    "original_sha256": "7fe2a67f63760f8a8a8e55b884f1c036150acf68684ebe3ee7a8965762d6172b",
+    "repository_sha256": "7fe2a67f63760f8a8a8e55b884f1c036150acf68684ebe3ee7a8965762d6172b",
+    "byte_identical": true
+  },
+  "results/pytest.txt": {
+    "location": "projects/gravity-witness/results/cycle01/pytest.txt",
+    "original_sha256": "687b782f10b136cd6948974d352bf259d1e58932269a2a91c0e05fd47adc5c29",
+    "repository_sha256": "687b782f10b136cd6948974d352bf259d1e58932269a2a91c0e05fd47adc5c29",
+    "byte_identical": true
+  },
+  "results/dp_comparison.csv": {
+    "location": "projects/gravity-witness/results/cycle01/dp_comparison.csv",
+    "original_sha256": "01004e5ff5d9d83e7417eb771b719c1fc8737cf963b62bc206eea5d6f751566c",
+    "repository_sha256": "01004e5ff5d9d83e7417eb771b719c1fc8737cf963b62bc206eea5d6f751566c",
+    "byte_identical": true
+  },
+  "tools/reproduce.sh": {
+    "location": "archives/gravity-witness-cycle01.zip!gravity-witness/tools/reproduce.sh",
+    "preserved": "original archive"
+  },
+  "tools/publish_private.sh": {
+    "location": "archives/gravity-witness-cycle01.zip!gravity-witness/tools/publish_private.sh",
+    "preserved": "original archive"
+  },
+  "notes/model_audit.txt": {
+    "location": "projects/gravity-witness/notes/model_audit.txt",
+    "original_sha256": "3ebd8632da3e1b8f763250b282d04d8a195ec52e39da13c7bbe475bfc3baf990",
+    "repository_sha256": "3ebd8632da3e1b8f763250b282d04d8a195ec52e39da13c7bbe475bfc3baf990",
+    "byte_identical": true
+  },
+  "notes/next_cycle.txt": {
+    "location": "projects/gravity-witness/notes/next_cycle.txt",
+    "original_sha256": "9f2d139bb825b0c52e45bebf088c7e267e90d945103ff88d821b9a5d71444eac",
+    "repository_sha256": "9f2d139bb825b0c52e45bebf088c7e267e90d945103ff88d821b9a5d71444eac",
+    "byte_identical": true
+  },
+  "notes/failure_log.txt": {
+    "location": "projects/gravity-witness/notes/failure_log.txt",
+    "original_sha256": "fb35e43d197e8ed81c253ff619f01299d6c340c685be076eafc036bc2828fcb1",
+    "repository_sha256": "fb35e43d197e8ed81c253ff619f01299d6c340c685be076eafc036bc2828fcb1",
+    "byte_identical": true
+  },
+  "notes/derivations.txt": {
+    "location": "projects/gravity-witness/notes/derivations.txt",
+    "original_sha256": "101fa7b004f498fb954cdac2ac4b45914f20bed7c3f1228daf89022877a3d9dd",
+    "repository_sha256": "101fa7b004f498fb954cdac2ac4b45914f20bed7c3f1228daf89022877a3d9dd",
+    "byte_identical": true
+  },
+  "notes/cycle01_brief.txt": {
+    "location": "projects/gravity-witness/notes/cycle01_brief.txt",
+    "original_sha256": "2435ba502841b98ddd7fe135a436e0b7b86413c3d67b810013c717fac5df1f30",
+    "repository_sha256": "2435ba502841b98ddd7fe135a436e0b7b86413c3d67b810013c717fac5df1f30",
+    "byte_identical": true
+  },
+  ".github/workflows/checks.yml": {
+    "location": "archives/gravity-witness-cycle01.zip!gravity-witness/.github/workflows/checks.yml",
+    "preserved": "original archive"
+  }
+}

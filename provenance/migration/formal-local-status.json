@@ -1,0 +1,8 @@
+{
+  "checked_at_utc": "2026-10-17T09:39:47.626714+00:00",
+  "status": "blocked",
+  "toolchain": "leanprover/lean4:v4.19.0",
+  "source_sha256": "87594e04a976b0e3d9ccf6879cdfb8d14de5b1fdca52ff47c391f7c479dac9ba",
+  "scope": "four algebra lemmas only; not quantum field theory, experimental validity or a unified theory",
+  "error": "lake is missing. Install elan/Lean as documented in README.md."
+}

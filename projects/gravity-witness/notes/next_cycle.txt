@@ -1,0 +1,31 @@
+NEXT CYCLE — ACCEPTANCE GATE, NOT A SCHEDULED BACKGROUND TASK
+
+Priority: determine which classical/hybrid alternatives remain physically viable
+in a common proposed apparatus, before optimizing a discriminator against them.
+
+Read and reproduce the finite-body/collapse constraints behind S20; contrast the
+precise DP assumptions of S05 and locality criticism S08. Record whether sigma
+can satisfy independent heating/force/collapse bounds at the required gap and
+split. A claim of viability requires numeric inequalities and source provenance.
+
+For a surviving parameter region, build a shared moving-wave-packet/finite-body
+geometry and noise budget. Compare the FULL probability distributions of matched
+models, not just negativity. Treat electromagnetic forces, initial entanglement,
+branch overlap, matter exchange, spin pulses, vibration and readout errors as
+explicit nuisance channels. Do not fit all nuisance parameters separately with
+unconstrained freedom, or select favorable sigma after seeing the intended result.
+
+Fix candidate setting grids and success criteria before the discriminator search.
+Separate simulated training/optimization cases from holdout validation cases.
+Report degeneracies honestly: different fundamental stories may produce the same
+accessible measurement record. A negative or impossible-discrimination result is
+an acceptable outcome, not a reason to loosen assumptions invisibly.
+
+Retain the diffusion/coherence and optical-cross-correlation tracks. Select a
+primary experiment only after at least one quantitative baseline from each.
+
+Infrastructure: obtain an empty private remote with a permitted creation route;
+publish the preserved local history. Install pinned Lean/mathlib, compile the
+small algebra draft, and record the compiler output before formal-verification
+claims. Do not contact researchers, publish a paper, buy compute or alter other
+projects without authorization. No unattended executor was launched this cycle.

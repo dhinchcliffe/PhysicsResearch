@@ -1,0 +1,195 @@
+{
+  "cycle": "01",
+  "date": "2026-10-17",
+  "status": "reproduction_and_model_audit; no new discovery claimed",
+  "constants": {
+    "G": 6.6743e-11,
+    "hbar": 1.0545718176461565e-34,
+    "source": "scipy.constants installed version"
+  },
+  "illustrative_case": {
+    "kind": "illustrative_static_hold_not_experimental_measurement",
+    "mass_a_kg": 1e-14,
+    "mass_b_kg": 1e-14,
+    "centre_distance_m": 0.00045,
+    "path_split_m": 0.00025,
+    "hold_time_s": 2.5,
+    "branch_distances_m": [
+      0.00045,
+      0.0007,
+      0.00019999999999999998,
+      0.00045
+    ],
+    "branch_phases_rad": [
+      0.3516066314687523,
+      0.2260328345156265,
+      0.7911149208046928,
+      0.3516066314687523
+    ],
+    "delta_rad": -0.3139344923828147,
+    "concurrence": 0.15632346122860508,
+    "negativity": 0.07816173061430244,
+    "phase_rate_rad_s": 0.12557379695312584,
+    "quadratic_phase_rate_rad_s": 0.08681645221450675,
+    "quadratic_relative_error": 0.308641975308642
+  },
+  "small_splitting_case": {
+    "d_m": 0.0005,
+    "s_m": 5e-05,
+    "exact_rate_rad_s": 0.002557139137954563,
+    "quadratic_rate_rad_s": 0.0025315677465750173,
+    "quadratic_relative_error": 0.01
+  },
+  "phase_calibrated_readout": {
+    "scope": "illustrative equal local dephasing; trusted calibrated axes",
+    "target_phase_rad": -0.3139344923828147,
+    "assumed_retention_lambda": 0.95,
+    "score_S": 1.1995145763343489,
+    "separable_bound": 1.0,
+    "negativity": 0.04987864408358745,
+    "threshold_retention_lambda": 0.8558213033829061,
+    "retention_is_not_final_single_particle_visibility": true,
+    "final_single_particle_visibility": 0.9383206197037511,
+    "settings": {
+      "XX": {
+        "expectation": 0.14850728816717473,
+        "probabilities_pp_pm_mp_mm": [
+          0.2871268220417937,
+          0.2128731779582063,
+          0.2128731779582061,
+          0.28712682204179346
+        ]
+      },
+      "YY": {
+        "expectation": -0.14850728816717473,
+        "probabilities_pp_pm_mp_mm": [
+          0.2128731779582063,
+          0.2871268220417935,
+          0.28712682204179363,
+          0.2128731779582061
+        ]
+      },
+      "ZZ": {
+        "expectation": 0.9024999999999995,
+        "probabilities_pp_pm_mp_mm": [
+          0.006464690148124397,
+          0.02437499999999999,
+          0.024374999999999994,
+          0.9447853098518751
+        ]
+      }
+    },
+    "sampling_example": {
+      "assumptions": "iid; pre-fixed sample size; bounded systematic bias; no postselection",
+      "alpha": 0.001,
+      "beta": 0.05,
+      "systematic_allowance": 0.03,
+      "trials_per_setting": 3968,
+      "not_a_lab_feasibility_forecast": true
+    }
+  },
+  "dp_reproduction_file": "results/dp_reproduction.json",
+  "pi_phase": {
+    "threshold_retention_lambda": 0.41421356237309515,
+    "max_decay_exponent_gamma_t": 0.8813735870195429,
+    "max_decay_rate_over_phase_rate_at_pi": 0.28054992616959007,
+    "cases": [
+      {
+        "label": "ideal",
+        "retention_lambda": 1.0,
+        "negativity": 0.49999999999999994,
+        "score_S": 3.0,
+        "XZ": 1.0,
+        "ZX": 1.0,
+        "YY": 1.0,
+        "XZ_joint_probabilities": [
+          0.5,
+          0.0,
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "label": "illustrative_environmental_noise",
+        "retention_lambda": 0.8,
+        "negativity": 0.31000000000000005,
+        "score_S": 2.24,
+        "XZ": 0.8,
+        "ZX": 0.8,
+        "YY": 0.6400000000000001,
+        "XZ_joint_probabilities": [
+          0.45,
+          0.04999999999999999,
+          0.04999999999999999,
+          0.45
+        ]
+      },
+      {
+        "label": "pi_threshold",
+        "retention_lambda": 0.41421356237309515,
+        "negativity": 1.1102230246251565e-16,
+        "score_S": 1.0000000000000002,
+        "XZ": 0.41421356237309515,
+        "ZX": 0.41421356237309515,
+        "YY": 0.17157287525381,
+        "XZ_joint_probabilities": [
+          0.3535533905932738,
+          0.1464466094067262,
+          0.1464466094067262,
+          0.3535533905932738
+        ]
+      },
+      {
+        "label": "projected_KTM",
+        "retention_lambda": 0.20787957635076193,
+        "negativity": 0.0,
+        "score_S": 0.4589730709652961,
+        "XZ": 0.20787957635076193,
+        "ZX": 0.20787957635076193,
+        "YY": 0.04321391826377226,
+        "XZ_joint_probabilities": [
+          0.3019698940876905,
+          0.19803010591230952,
+          0.19803010591230952,
+          0.3019698940876905
+        ]
+      }
+    ]
+  },
+  "symbolic_checks": {
+    "exact_inline_phase": "2*A*s**2/(d*(-d + s)*(d + s))",
+    "quadratic_relative_error": "s**2/d**2",
+    "local_phase_invariance": "passed",
+    "pi_partial_transpose_characteristic_polynomial": "(-l**2 + 4*x - 1)**2*(l**2 - 2*l + 4*x - 1)*(l**2 + 2*l + 4*x - 1)/256",
+    "KTM_noise_matrix_eigenvalues": [
+      "y-2*g",
+      "y+2*g"
+    ]
+  },
+  "code_checks": {
+    "tests": 970,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "report": "results/pytest.xml",
+    "nature": "parameterized numerical/unit tests, not formal proofs or external expert review"
+  },
+  "formal_verification": {
+    "status": "NOT_EXECUTED",
+    "reason": "Lean and mathlib absent; external download unavailable"
+  },
+  "external_physics_review": "NOT_PERFORMED",
+  "experimental_data_collected": false,
+  "repository_remote": {
+    "intended": "dhinchcliffe/gravity-witness",
+    "status": "NOT_CREATED; connector has no repository-creation action"
+  },
+  "versions": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "sympy": "1.14.0",
+    "matplotlib": "3.10.8",
+    "pytest": "9.0.2"
+  }
+}

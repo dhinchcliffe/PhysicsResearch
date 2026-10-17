@@ -1,0 +1,61 @@
+MODEL AUDIT v0.2 / 2026-10-17
+Audited means the stated scope below, not every paper's equations.
+
+M0 Effective Newtonian quantum-matter interaction
+State: two branch qubits. Hamiltonian: diagonal -G m_A m_B/r. Quantized matter.
+Reproduced static phase/entanglement with environment modeled separately.
+The matter-only effective Hamiltonian does not establish the mediator ontology.
+No field dynamics, relativistic corrections, moving packets or apparatus included.
+
+M1 Kafri–Taylor–Milburn measurement-and-feedback classical channel
+Reproduced static branch restriction of S02 Eq.16. Classical-communication model
+cannot entangle a separable input under the stated assumptions. It is a benchmark,
+not our strongest viable contender. S21 constrains pairwise extensions using atom
+interferometry; do not generalize those exclusions to all classical-quantum models.
+
+M2 Mean-field semiclassical / Schrödinger–Newton
+Specific state-dependent field dynamics; not one universal classical model.
+S10's optical cross-correlation proposal is identified, not reproduced. Conditioning
+and preparation assumptions must be fixed before comparing measurement records.
+
+M3 Oppenheim stochastic classical-quantum framework
+A family of completely-positive stochastic hybrid dynamics, not one fixed noise
+curve. S03 and S09 motivate joint diffusion/decoherence tests. Not implemented.
+Need select an explicit realization and parameter priors independently of data.
+
+M4 Gaussian DP dynamics analyzed by Trillo–Navascués
+Selected static equal-mass equations, roots and entangling example reproduced.
+Classification: mathematical entanglement demonstrated within model; status as
+local classical mediation DISPUTED; empirical viability of our parameters OPEN.
+Finite bodies, smearing scale, heating, shielding and apparatus coherence not
+established. S08 addresses locality; S20 argues actual table-top constraints alter
+the inference. Do not call it a proven viable counterexample to the local-mediator
+theorem, or replace its correlated noise with independent dephasing.
+
+M5 Aziz–Howl classical gravity with quantum matter-field propagation
+Nature paper S04 makes an entanglement claim. S14, S15 and S22 challenge dynamics,
+subsystem partition, and/or whether quantized matter exchange is the mediator.
+Our initial charter overstated this as a settled demonstration. Corrected to
+DISPUTED. No full QFT derivation has yet been independently reproduced here.
+A supplied definition of classical field alone does not settle locality, allowed
+non-gravitational channels, identical-particle partitions or postselection.
+
+THE INFERENCE WE WILL ACTUALLY TEST
+Observed entanglement + verified initial separability + exclusion of other quantum
+channels + an applicable local-mediator theorem can support nonclassical gravity.
+The theorem is conditional; a countermodel must violate a conclusion while meeting
+its assumptions, not merely attach the word classical to different dynamics.
+
+EXPERIMENT SELECTION
+Candidate A, mass-branch/spin readout: computational benchmark exists; apparatus
+and viable-alternative audit remains open. Candidate B, diffusion/coherence: source
+screening only. Candidate C, mirror cross-correlations: source screening only.
+Do not select A as the best experiment simply because its toy code is easiest.
+A future scorecard must compare the same model parameters, constraints, data
+likelihoods and nuisance treatment. Three candidates remain in consideration.
+
+SOURCE-CURRENCY LIMITATION
+Some web caches expose different arXiv versions. S14 full v1 and primary v2
+abstract were accessible; a secondary index surfaced v3 but primary v3 failed to
+fetch. We do not treat the unavailable version's argument as verified. Refresh
+specific version URLs before finalizing the QFT dispute audit.
