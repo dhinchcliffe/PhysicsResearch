@@ -15,5 +15,5 @@ def test_peak_height_remains_strict():
     assert compare_numeric(expected,expected+0.000001,path)
 
 def test_all_other_numeric_fields_keep_existing_precision():
-    assert compare_numeric(123.456,123.456000005,"dp_reproduction.json/other")
+    assert compare_numeric(123.456,123.456005,"dp_reproduction.json/other")
     assert compare_numeric(0.45,0.45+1e-8,"cycle01.json/signal")
