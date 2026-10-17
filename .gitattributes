@@ -6,6 +6,8 @@
 *.toml text eol=lf
 *.md text eol=lf
 *.json text eol=lf
+# Preserve original CSV bytes, including the research archive's CRLF endings.
+*.csv -text
 *.pdf binary
 *.png binary
 *.zip binary
