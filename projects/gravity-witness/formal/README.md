@@ -2,13 +2,15 @@
 
 ## Status and scope
 
-The Cycle 01 file is a proof draft. Its four theorem statements cover determinant necessity, a nonzero-pivot factorization implication, local-factor scaling and additive phase cancellation. They do not prove the complete concurrence identity, the remaining pivot cases, any gravitational field theory, or apparatus feasibility.
+**The four original algebra lemmas were kernel-checked successfully on GitHub on 17 October 2026.** The recorded run built the pinned project, checked the source directly, and audited the axiom dependencies. See [the dated evidence](../../../provenance/formal/2026-10-17/README.md) and [the successful run](https://github.com/dhinchcliffe/PhysicsResearch/actions/runs/39022307768).
 
-`README.txt` preserves the original historical status. Current execution is reported by `tools/check_formal.py` and the separate formal CI job. Missing network/toolchain is **blocked**, rejected source is **failed**, and a successful build plus direct source check and axiom audit is **kernel_checked**. Do not infer a successful run from a workflow being present.
+The four theorem statements cover determinant necessity, a nonzero-pivot factorization implication, local-factor scaling and additive phase cancellation. They do not prove the complete concurrence identity, the remaining pivot cases, any gravitational field theory, or apparatus feasibility.
+
+`README.txt` and the comment in the unchanged source preserve the original historical draft status. Current execution is reported by `tools/check_formal.py` and the separate formal CI job. Missing network/toolchain is **blocked**, rejected source is **failed**, and a successful build plus direct source check and axiom audit is **kernel_checked**. Do not infer a successful run from a workflow merely being present.
 
 ## Pinned environment
 
-`lean-toolchain` selects Lean 4.19.0. `lakefile.toml` selects mathlib v4.19.0. The first prepared run creates `lake-manifest.json`; preserve that exact resolution alongside successful compiler evidence before promoting the proofs. Do not upgrade to an unpinned master branch.
+`lean-toolchain` selects Lean 4.19.0. `lakefile.toml` selects mathlib v4.19.0. `lake-manifest.json` commits the exact dependency revisions produced by the successful build. Do not upgrade dependencies to unpinned branches.
 
 Install elan according to the root README, then run from the repository root:
 

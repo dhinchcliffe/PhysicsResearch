@@ -1,0 +1,25 @@
+Exact concluding excerpt from the successful GitHub Actions formal artifact.
+Dependency download progress omitted; this is not the full installation log.
+
+Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)
+$ /home/runner/.elan/bin/lake update
+info: toolchain not updated; already up-to-date
+info: mathlib: running post-update hooks
+No files to download
+Decompressing 6641 file(s)
+Unpacked in 761 ms
+Completed successfully!
+$ /home/runner/.elan/bin/lake exe cache get
+No files to download
+Decompressing 6641 file(s)
+Unpacked in 161 ms
+Completed successfully!
+$ /home/runner/.elan/bin/lake build
+✔ [6653/6654] Built GravityWitness
+Build completed successfully.
+$ /home/runner/.elan/bin/lake env lean GravityWitness.lean
+$ /home/runner/.elan/bin/lake env lean AxiomAudit.lean
+'GravityWitness.factors_implies_det_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GravityWitness.det_zero_factors_nonzero_pivot' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GravityWitness.local_factors_det' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GravityWitness.phase_cancellation' depends on axioms: [propext, Classical.choice, Quot.sound]

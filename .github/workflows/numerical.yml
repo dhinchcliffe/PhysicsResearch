@@ -8,6 +8,8 @@ on:
       - 'tests/**'
       - 'requirements.lock'
       - 'pyproject.toml'
+      - '.gitattributes'
+      - 'provenance/migration/immutable-sha256.json'
       - '.github/workflows/numerical.yml'
   pull_request:
   workflow_dispatch:
