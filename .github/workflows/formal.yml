@@ -1,0 +1,41 @@
+name: Lean kernel verification
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'projects/gravity-witness/formal/**'
+      - 'tools/check_formal.py'
+      - '.github/workflows/formal.yml'
+  pull_request:
+    paths:
+      - 'projects/gravity-witness/formal/**'
+      - 'tools/check_formal.py'
+      - '.github/workflows/formal.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  lean:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Install elan without an unpinned default Lean toolchain
+        run: |
+          curl -fsSL https://elan.lean-lang.org/elan-init.sh -o /tmp/elan-init.sh
+          sh /tmp/elan-init.sh -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - name: Build pinned proofs and inspect axiom dependencies
+        run: python3 tools/check_formal.py --prepare
+      - name: Preserve compiler output and dependency resolution
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: formal-evidence-${{ github.sha }}
+          path: |
+            build/formal/
+            projects/gravity-witness/formal/lake-manifest.json
+          if-no-files-found: warn
+          retention-days: 30
