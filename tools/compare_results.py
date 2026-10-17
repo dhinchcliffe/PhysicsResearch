@@ -8,6 +8,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 BASELINE = ROOT / "projects/gravity-witness/results/cycle01"
 
+# The peak coordinate is a flat-maximum optimizer diagnostic, not a measured
+# observable. At u ≈ 408, shifts of 1e-5 change negativity by ~1e-16:
+# floating-point evaluation can move the reported argmax without moving the
+# peak height. Keep all predicted physical values at strict baseline tolerance.
+PEAK_LOCATION_PATH = "dp_reproduction.json/example/numerical_peak_u"
+
 
 def compare_numeric(expected, actual, path: str = "", failures=None) -> list[str]:
     if failures is None:
@@ -30,7 +36,9 @@ def compare_numeric(expected, actual, path: str = "", failures=None) -> list[str
     elif isinstance(expected, (int, float)) and not isinstance(expected, bool):
         if (not isinstance(actual, (int, float)) or isinstance(actual, bool)
                 or not math.isfinite(float(actual))
-                or not math.isclose(float(expected), float(actual), rel_tol=1e-9, abs_tol=1e-12)):
+                or not math.isclose(float(expected), float(actual),
+                    rel_tol=0.0 if path == PEAK_LOCATION_PATH else 1e-9,
+                    abs_tol=1e-4 if path == PEAK_LOCATION_PATH else 1e-12)):
             failures.append(f"{path}: {actual!r} != {expected!r}")
     # Human-readable status strings and environment metadata are not scientific predictions.
     return failures
@@ -64,7 +72,8 @@ def main() -> int:
         print("\n".join(failures))
         return 1
     print("PASS: all numeric JSON fields and both CSV datasets agree with Cycle 01.")
-    print("Tolerance: rtol=1e-9, atol=1e-12. Figure pixels and metadata are not compared.")
+    print("Scientific predictions: rtol=1e-9, atol=1e-12. Flat numerical peak coordinate: atol=1e-4; peak height stays strictly compared.")
+    print("Figure pixels and metadata are not compared.")
     return 0
 
 
