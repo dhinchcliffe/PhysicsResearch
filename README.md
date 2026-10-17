@@ -1,6 +1,6 @@
 # PhysicsResearch
 
-**Research observatory:** [Dashboard setup & Vercel deployment](dashboard/README.md) — an illustrated progress display built from the committed Cycle 01 evidence. The full research program and commands remain below.
+**Research observatory:** [Dashboard setup & Vercel deployment](dashboard/README.md) — an illustrated progress display built from committed Cycle 01 and Cycle 02 evidence. The full research program and commands remain below.
 
 ### An attempt at breakthrough physics with frontier AI
 
@@ -14,7 +14,9 @@ The organizing principle is simple: **understand the claim, inspect its assumpti
 
 ## Where the research stands
 
-**Cycle 01: reproduction and preliminary measurement design.** The archive contains a checked two-mass calculation, a calibrated entanglement readout, a restricted classical measurement-and-feedback benchmark, and a Gaussian-smeared Diósi–Penrose countermodel. Some mathematically entangling examples have **not** yet passed physical-viability constraints.
+**Cycle 01: reproduction and preliminary measurement design.** [Cycle 02 physical-constraint audit](projects/gravity-witness/notes/cycle02_constraints.md) now adds a finite-sphere calculation, rigid-body non-overlap, a screening-clearance limit, and careful separation of empirical from conditional force and noise constraints. The original entangling example remains *experimentally unverified*; the physical-viability research gate stays open.
+
+The Cycle 01 archive contains a checked two-mass calculation, a calibrated entanglement readout, a restricted classical measurement-and-feedback benchmark, and a Gaussian-smeared Diósi–Penrose countermodel. Some mathematically entangling examples have **not** yet passed physical-viability constraints.
 
 | Evidence | Current meaning |
 | --- | --- |
@@ -22,7 +24,7 @@ The organizing principle is simple: **understand the claim, inspect its assumpti
 | Regenerated JSON and CSV results | Reproduced during this repository migration; compared with the frozen originals. |
 | Four Lean algebra lemmas | Kernel-checked on GitHub with Lean 4.19.0; [dated compiler evidence](provenance/formal/2026-10-17/README.md) states the limited scope. |
 | Five computed figures | Generated from idealized model equations, not measurements. |
-| 22 source records and a claim ledger | Audit depth and disputed interpretations are recorded, not silently treated as established. |
+| 22 Cycle 01 source records, plus a Cycle 02 source extension | Audit depth and disputed interpretations are recorded, not silently treated as established. |
 | An illustrative score above 1 | Entanglement under trusted measurement assumptions—not identification of gravity as its cause. |
 
 There is no apparatus demonstration, independent expert review, universal experimental discriminator, or unified theory claimed here. See the [full atlas](docs/atlas/2026-10-17-v0.2/atlas.md), [claim ledger](projects/gravity-witness/claims.json), [model audit](projects/gravity-witness/notes/model_audit.txt), and [failure log](projects/gravity-witness/notes/failure_log.txt).

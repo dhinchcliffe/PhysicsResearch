@@ -60,7 +60,7 @@ export default function Home(){
  <section id="progress" className="shell section-block">
   <div className="section-heading"><div><p className="eyebrow subtle">02 / RESEARCH RECORD</p><h2>Where the evidence stands</h2></div><p className="section-dek">A measured view of progress, not a percentage toward solving fundamental physics.</p></div>
   <div className="evidence-grid">
-   <div className="progress-card"><ProgressRing completed={complete} total={milestones.length}/><div><p className="card-kicker">CURRENT POSITION</p><h3>Models reproduced.<br/>Nature unresolved.</h3><p>The mathematics is checked. Next: determine if the harder classical-gravity countermodel is physically plausible.</p></div></div>
+   <div className="progress-card"><ProgressRing completed={complete} total={milestones.length}/><div><p className="card-kicker">CURRENT POSITION</p><h3>Finite-size tested.<br/>Feasibility unresolved.</h3><p>The equations survive a finite-sphere extension, but our candidate geometry struggles with conducting-shield clearance. Feasibility remains unresolved.</p></div></div>
    <div className="stat-card"><p className="card-kicker">NUMERICAL CHECKS</p><div className="stat-value">{research.testCount.toLocaleString("en-US")}</div><p>Passed in the recorded research suite</p><span>Not mathematical proofs</span></div>
    <div className="stat-card"><p className="card-kicker">FORMAL WORK</p><div className="stat-value">04</div><p>Finite algebra lemmas kernel-checked in Lean</p><span>No claim about the apparatus</span></div>
    <div className="stat-card"><p className="card-kicker">RESEARCH LIBRARY</p><div className="stat-value">{String(research.sourceCount).padStart(2,"0")}</div><p>References catalogued</p><span>{research.claimCount} claims documented · {research.openClaims} open/disputed</span></div>
@@ -70,7 +70,7 @@ export default function Home(){
   </div>
  </section>
  <section className="insight-band"><div className="shell insight-grid"><div><p className="eyebrow subtle">03 / INTERPRETATION</p><h2>Entanglement is a <em>clue, not a verdict.</em></h2></div><div>
-   <p>Our model predicts a measurable signature in an idealized two-mass system. One restricted classical channel cannot reproduce it; another mathematical countermodel can. That countermodel has not passed a realistic constraints audit.</p>
+   <p>Our model predicts a measurable signature in an idealized two-mass system. One restricted classical channel cannot reproduce it; another mathematical countermodel can. Our new constraint audit identifies a severe shielding obstacle, without proving a universal no-go.</p>
    <a href={REPO+"/blob/main/projects/gravity-witness/notes/model_audit.txt"} target="_blank" rel="noreferrer">Inspect the competing models <Arrow diagonal/></a>
  </div></div></section>
  <section className="shell section-block lab-section" id="laboratory"><div className="section-heading"><div><p className="eyebrow subtle">04 / INTERACTIVE STUDY</p><h2>A small virtual laboratory</h2></div><p className="section-dek">Move two assumptions. Watch the predicted quantum witness change. Calculated, not observed.</p></div><Explorer mode="lab" witness={research.witness}/></section>
@@ -79,7 +79,7 @@ export default function Home(){
   <a href={ATLAS} target="_blank" rel="noreferrer" className="resource-link"><span>01 / READ</span><h3>The living research atlas</h3><p>Accessible explanations, definitions, diagrams and the reasoning behind every gate.</p><b>Google Docs <Arrow diagonal/></b></a>
   <a href={REPO+"/tree/main/projects/gravity-witness"} target="_blank" rel="noreferrer" className="resource-link"><span>02 / REPRODUCE</span><h3>Source &amp; calculations</h3><p>Python simulations, tests, Lean statements, reproducibility records and figures.</p><b>Private GitHub repository <Arrow diagonal/></b></a>
   <a href={REPO+"/blob/main/docs/atlas/2026-10-17-v0.2/atlas.pdf"} target="_blank" rel="noreferrer" className="resource-link"><span>03 / ARCHIVE</span><h3>The illustrated research report</h3><p>A versioned snapshot of the full research atlas, preserved with its figures.</p><b>Atlas PDF <Arrow diagonal/></b></a>
- </div><div className="source-note">This dashboard describes frozen Cycle {research.cycle} ({research.recorded}). Data counts come from committed JSON, read at build time. Private resources require permission.</div>
+ </div><div className="source-note">Cycle {research.cycle} predictions and Cycle {research.feasibility.phase} constraints, recorded {research.recorded}. Counts come from committed JSON at build time. No experimental data or viability claim. Private resources require permission.</div>
  </section>
  <footer className="site-footer"><div className="shell footer-inner"><div className="footer-brand"><span className="brand-glyph">Φ</span><span>PHYSICSRESEARCH<small>Gravity Witness · An inquiry in progress</small></span></div><div><p>No experimental result. No claim of unification.<br/>A disciplined search for something we can test.</p></div><a href="#top">Back to the beginning ↑</a></div></footer>
  </main>;

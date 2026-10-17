@@ -30,6 +30,8 @@ Import `dhinchcliffe/PhysicsResearch` into Vercel as a **Next.js** project with 
 - `projects/gravity-witness/claims.json`
 - `projects/gravity-witness/sources.json`
 
+The dashboard now also reads `projects/gravity-witness/results/cycle02/constraints.json`, `projects/gravity-witness/results/cycle02/claims.json`, and `projects/gravity-witness/results/cycle02/sources.json`. The physical-constraint research gate remains ongoing: geometry and numerical reproducibility do not establish experimental viability.
+
 Test, source and claim counts therefore update at build time when the corresponding records are intentionally updated. Research milestones are manually adjudicated in that module; advancing them is a substantive editorial claim, not a CI run or a percentage toward solving quantum gravity. Cycle 01 values represent simulations under stated idealizations, not observations.
 
 The explorer in `app/components/Explorer.jsx` implements the exact Cycle 01 two-qubit **toy** witness `S = λ² + 2λ|sin(Δ/2)|` and scales the original phase with interaction time. The duration slider is exploratory: it holds coherence constant despite real duration-dependent decoherence and does not represent apparatus feasibility. Always maintain those limitations when extending it.
