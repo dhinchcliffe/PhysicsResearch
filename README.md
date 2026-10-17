@@ -18,7 +18,7 @@ The organizing principle is simple: **understand the claim, inspect its assumpti
 | --- | --- |
 | 970 parameterized research checks | Numerical and software checks, including separate matrix-exponential implementations. Not 970 proofs. |
 | Regenerated JSON and CSV results | Reproduced during this repository migration; compared with the frozen originals. |
-| Four Lean algebra lemmas | Preserved proof targets. Read the formal verification section and actual compiler report before calling them verified. |
+| Four Lean algebra lemmas | Kernel-checked on GitHub with Lean 4.19.0; [dated compiler evidence](provenance/formal/2026-10-17/README.md) states the limited scope. |
 | Five computed figures | Generated from idealized model equations, not measurements. |
 | 22 source records and a claim ledger | Audit depth and disputed interpretations are recorded, not silently treated as established. |
 | An illustrative score above 1 | Entanglement under trusted measurement assumptions—not identification of gravity as its cause. |
@@ -68,6 +68,7 @@ PhysicsResearch/
 ├── tests/                            Repository/integrity tooling tests
 ├── provenance/
 │   ├── cycle01/                      Original manifest, README and Git bundle
+│   ├── formal/                       Dated kernel-verification evidence
 │   └── migration/                    Path map and actual revalidation evidence
 ├── archives/                         Untouched original Cycle 01 ZIP
 └── build/                            Your new runs; ignored by Git
@@ -211,7 +212,9 @@ The committed [migration evidence](provenance/migration/README.md) records the a
 
 The original proof draft targets **Lean 4.19.0 and mathlib v4.19.0**. These deliberately remain pinned; do not replace them with “latest” to work around a failure.
 
-The local migration runtime could not resolve the Lean installation host, so it did **not** perform a kernel check. The repository supplies a separate formal CI workflow and an explicit status-producing runner. A Python pass or a workflow file merely existing does not establish that Lean passed. Consult the completed formal workflow's logs/artifact before making that claim.
+The first GitHub-hosted formal run **successfully kernel-checked all four original algebra lemmas**, without changing their statements or proof bodies. It built the project, checked the source directly, and audited each theorem's axiom dependencies. Read the [dated evidence and exact scope](provenance/formal/2026-10-17/README.md). The resolved `lake-manifest.json` is committed alongside the project.
+
+The earlier local runtime was blocked; its report and the historical atlas remain unchanged. Those records describe an earlier environment. A Python pass or a workflow file merely existing still does not establish that a later edit passed Lean: consult the run corresponding to the actual source commit.
 
 Install `elan`, Lean's toolchain manager, using the [official Lean installation instructions](https://lean-lang.org/install/manual/). For macOS/Linux, the following saves the installer for inspection rather than piping it directly into a shell:
 
@@ -229,7 +232,7 @@ On Windows, follow the Windows section of the official installation page and reo
 python tools/check_formal.py --prepare
 ```
 
-The first preparation resolves the pinned mathlib release and downloads its compiled cache. This requires network access and substantially more storage than the Python example. The runner then builds the project, checks the source directly, and prints each theorem's axiom dependencies. It saves `status.json`, `lean.log`, and the resolved dependency manifest under `build/formal/latest/`.
+The first preparation uses the pinned mathlib release and downloads its compiled cache. The committed `lake-manifest.json` records the exact revisions from the successful verification; review any dependency-manifest diff rather than silently upgrading it. This requires network access and substantially more storage than the Python example. The runner then builds the project, checks the source directly, and prints each theorem's axiom dependencies. It saves `status.json`, `lean.log`, and the resolved dependency manifest under `build/formal/latest/`.
 
 After dependencies are prepared:
 
@@ -258,6 +261,16 @@ A missing toolchain, rejected proof, explicit admission, or `sorryAx` in the axi
 | `phase_cancellation` | Additive phases local to either subsystem cancel in the joint phase combination. |
 
 These are algebra statements. They do not formalize the complete concurrence formula, model viability, apparatus physics, general relativity, or quantum field theory. See the [formal project guide](projects/gravity-witness/formal/README.md). Standard Lean foundations are not the same as project-specific physical assumptions.
+
+## Continuous verification on GitHub
+
+[Numerical reproduction workflow](https://github.com/dhinchcliffe/PhysicsResearch/actions/workflows/numerical.yml) and [Lean kernel verification workflow](https://github.com/dhinchcliffe/PhysicsResearch/actions/workflows/formal.yml) are separate, visible checks. Relevant pushes and pull requests trigger them; each also offers **Run workflow** in GitHub's Actions tab. You can review results from an iPad without installing anything.
+
+The numerical job installs the exact Python dependency versions on a clean runner, checks preserved bytes, runs repository checks, executes the 970 scientific checks, regenerates figures and data, and compares against the frozen originals. The formal job installs the pinned Lean environment, compiles the lemmas, checks the source, and audits the axioms. Neither job is allowed to hide a failure with `continue-on-error`.
+
+Open a run, check its commit SHA and conclusion, then download its evidence artifact to see the actual logs and result files. Workflow artifacts are retained for 30 days; the original Cycle 01 records and selected dated verification evidence are committed permanently. A passing historical artifact does not certify a changed source file.
+
+A clean-checkout audit caught Git normalizing two original CSVs. Their exact bytes were restored from the verified archive and `*.csv -text` now prevents that normalization. The original hashes and scientific tests were not weakened. See the [preservation audit](provenance/migration/clean-checkout-audit.md).
 
 ## Google Docs and the versioned research record
 
