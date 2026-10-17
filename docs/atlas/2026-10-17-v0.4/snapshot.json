@@ -1,0 +1,71 @@
+{
+  "edition": "0.4",
+  "date": "2026-10-17",
+  "source_document_id": "1rkQ5z3phVVdCVBP6Obtn3HBA1U6YbQ9L78HwgeqdGAc",
+  "source_document_url": "https://docs.google.com/document/d/1rkQ5z3phVVdCVBP6Obtn3HBA1U6YbQ9L78HwgeqdGAc",
+  "source_revision_id": "AHj4eMR3Cicn68IMmkd3KhBdO4JrwtkmUzTK6FlQF2DeppOScYz0RodY_C_BwzMzuMCdukrWdZwSKlC6DuoV1RIOG_Wzo_Cmig4ufcP5G0E",
+  "exported_at_utc": "2026-10-17T14:31:20Z",
+  "revision_verified_after_exports": true,
+  "source_code_commit": "6ad5f4b7d4b280890829e1ce1773a317d46f953e",
+  "tabs": [
+    {
+      "id": "t.pruzy2mq6utx",
+      "title": "Cycle 02 — Physical constraints"
+    },
+    {
+      "id": "t.q5e9ydjw0gsh",
+      "title": "Cycle 01 — Results & learning"
+    },
+    {
+      "id": "t.0",
+      "title": "Charter & foundations"
+    }
+  ],
+  "images": [
+    {
+      "file": "assets/image1.png",
+      "sha256": "b16ca453d32c9bdfb1380eb4ecdefbb433641128e569f2e7e067c3a516d52e29"
+    },
+    {
+      "file": "assets/image2.png",
+      "sha256": "d546fcd1f3e676f9487de9abebcd07baba54069bf5a61b74b8a41fbd64a97496"
+    },
+    {
+      "file": "assets/image3.png",
+      "sha256": "cb0698ac516e0790563e9929f38e443f2c6b4520381b9bedfaa23984ce1e3de7"
+    },
+    {
+      "file": "assets/image4.png",
+      "sha256": "ef592af2a7a5a3522e4578e1e2aebd44666cf1bce258c22f2b326787f51c2e0d"
+    },
+    {
+      "file": "assets/image5.png",
+      "sha256": "864cc1306c54d77f7c20f39c35fc6a54dbd97e59b7dc96def9d88080e8064a20"
+    },
+    {
+      "file": "assets/image6.png",
+      "sha256": "c1f42b7c49cf9c8de2174a7d77efcb6ea9240cc16ee314a26f0869027a5e779c"
+    }
+  ],
+  "pdf": {
+    "native_pages": 27,
+    "reading_pages": 24,
+    "removed_native_pages_1_based": [
+      1,
+      9,
+      17
+    ],
+    "reason": "Only exact-title, image-free Google tab divider pages removed; no research content removed",
+    "additional_changes": "Running header, page numbers, metadata and remapped bookmarks only",
+    "all_kept_page_text_and_six_figures_preserved": true,
+    "processor": "PyMuPDF 1.26.7"
+  },
+  "markdown_changes": "Only inline base64 image definitions replaced by relative asset references",
+  "editorial_scope": "Source-based author pass; no new calculation, no experimental viability claim; Gate 03 open",
+  "files": {
+    "google-export.pdf": "2b1c280cb41cfbed1071935bcfbb99a8af3f83dec8994a417962ef0c7cf8a7b6",
+    "google-export.md": "3a35dcaf147f30c8801769a01d147c79fefaced4dbef55b738431c3ff9a414e5",
+    "atlas.pdf": "2a818744ff0d124d3d6f49b30e05145fa666c6d93ec1e38a99239083412a83ed",
+    "atlas.md": "69a54abdceac93a00f56efdb90fa0b745dd7bd6c560471767955947380012d80"
+  }
+}
