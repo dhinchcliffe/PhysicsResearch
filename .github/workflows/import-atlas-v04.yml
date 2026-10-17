@@ -1,0 +1,75 @@
+name: One-time atlas v0.4 transfer
+on:
+  issues:
+    types: [opened]
+permissions:
+  contents: write
+jobs:
+  import:
+    if: >-
+      github.event.issue.title == 'Import reviewed atlas v0.4 2b1c280c' &&
+      github.event.issue.user.login == 'dhinchcliffe'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: 5a09a58b6e32be0fbc060f46676fe41e295168f3
+          persist-credentials: true
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13'
+      - name: Install the pinned document-only PDF processor
+        run: python -m pip install PyMuPDF==1.26.7
+      - name: Transfer exactly the two reviewed exports and prepare the reading copies
+        shell: bash
+        run: |
+          python - <<'PY'
+          import hashlib, json, os, pathlib, subprocess, urllib.parse, urllib.request
+          root = pathlib.Path.cwd()
+          folder = root / 'docs/atlas/2026-10-17-v0.4'
+          expected_script = '652e0c7ffba35ceb117e3dbf2c39905cf2ef408be17c97f177eb61a04b1087d7'
+          sha = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
+          if sha(folder / 'prepare_snapshot.py') != expected_script:
+              raise SystemExit('Snapshot processor differs from the reviewed source')
+          event = json.loads(pathlib.Path(os.environ['GITHUB_EVENT_PATH']).read_text())
+          payload = json.loads(event['issue']['body'])
+          for name, key, expected, limit in [
+              ('google-export.pdf', 'pdf_url', '2b1c280cb41cfbed1071935bcfbb99a8af3f83dec8994a417962ef0c7cf8a7b6', 2000000),
+              ('google-export.md', 'markdown_url', '3a35dcaf147f30c8801769a01d147c79fefaced4dbef55b738431c3ff9a414e5', 1000000),
+          ]:
+              url = payload[key]
+              print('::add-mask::' + url, flush=True)
+              parts = urllib.parse.urlsplit(url)
+              if parts.scheme != 'https' or not (parts.hostname or '').endswith('.oaiusercontent.com'):
+                  raise SystemExit('Unexpected transfer origin')
+              try:
+                  with urllib.request.urlopen(url, timeout=60) as response:
+                      final = urllib.parse.urlsplit(response.geturl())
+                      if final.scheme != 'https' or not any((final.hostname or '').endswith(s) for s in ('.oaiusercontent.com', '.blob.core.windows.net')):
+                          raise ValueError('Unexpected transfer redirect')
+                      data = response.read(limit + 1)
+              except Exception:
+                  raise SystemExit('Transfer failed; signed URL is not included in the error')
+              if len(data) > limit or hashlib.sha256(data).hexdigest() != expected:
+                  raise SystemExit('Transfer size or SHA256 mismatch: ' + name)
+              path = folder / name
+              if path.exists():
+                  raise SystemExit('Refusing to replace an existing export')
+              path.write_bytes(data)
+          subprocess.run(['python', str(folder / 'prepare_snapshot.py')], check=True)
+          for name, expected in [
+              ('atlas.pdf', '2a818744ff0d124d3d6f49b30e05145fa666c6d93ec1e38a99239083412a83ed'),
+              ('atlas.md', '69a54abdceac93a00f56efdb90fa0b745dd7bd6c560471767955947380012d80'),
+          ]:
+              if sha(folder / name) != expected:
+                  raise SystemExit('Derived file differs from the visually reviewed artifact: ' + name)
+          subprocess.run(['python', 'tools/verify_artifacts.py'], check=True)
+          subprocess.run(['git', 'config', 'user.name', 'github-actions[bot]'], check=True)
+          subprocess.run(['git', 'config', 'user.email', '41898282+github-actions[bot]@users.noreply.github.com'], check=True)
+          subprocess.run(['git', 'add', '--', 'docs/atlas/2026-10-17-v0.4'], check=True)
+          subprocess.run(['git', 'commit', '-m', 'Preserve author-reviewed atlas v0.4 with six figures and verified PDF'], check=True)
+          subprocess.run(['git', 'push', 'origin', 'HEAD:refs/heads/docs/atlas-v0.4-author-pass'], check=True)
+          print('Transferred 24-page reading copy, 27-page native export, three tabs and six figures.')
+          print('All original frozen artifacts preserved. Only the documentation branch was updated.')
+          PY
