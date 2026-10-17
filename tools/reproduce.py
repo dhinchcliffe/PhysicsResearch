@@ -65,7 +65,9 @@ def main() -> int:
                     raise RuntimeError(f"Pinned dependency mismatch: {name}: {actual} != {expected}")
         if sys.version_info[:2] != (3, 13):
             raise RuntimeError("Use Python 3.13 for the pinned Cycle 01 environment.")
-        run_logged([sys.executable, "-m", "pytest", "-q", str(PROJECT / "tests"),
+        run_logged([sys.executable, "-m", "pytest", "-q",
+                    str(PROJECT / "tests/test_gw.py"),
+                    str(PROJECT / "tests/test_dp.py"),
                     f"--junitxml={results / 'pytest.xml'}"], results / "pytest.txt", env)
         suites = list(ET.parse(results / "pytest.xml").getroot().iter("testsuite"))
         checks = {key: sum(int(s.attrib.get(key, 0)) for s in suites)

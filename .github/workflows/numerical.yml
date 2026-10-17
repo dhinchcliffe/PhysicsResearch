@@ -38,6 +38,10 @@ jobs:
         run: python -m pytest -q tests --junitxml=build/repository-tests.xml
       - name: Reproduce 970 scientific checks and compare original predictions
         run: python tools/reproduce.py --output build/gravity-witness/ci
+      - name: Test and regenerate Cycle 02 physical-constraint screening
+        run: |
+          python -m pytest -q projects/gravity-witness/tests/test_constraints.py --junitxml=build/cycle02-tests.xml
+          PYTHONPATH=projects/gravity-witness/src GW_CYCLE02_OUTPUT=build/gravity-witness/ci-cycle02 python projects/gravity-witness/scripts/run_constraints.py
       - name: Preserve actual execution evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
