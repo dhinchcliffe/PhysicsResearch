@@ -1,0 +1,94 @@
+{
+  "cycle": "02",
+  "claim_extension": true,
+  "claims": [
+    {
+      "id": "GW-C013",
+      "status": "DERIVED_AND_TESTED",
+      "claim": "In the exact inline d/sigma=3/8, L/sigma=1/8 configuration, nonoverlap of two rigid equal spheres requires sigma>16R/3",
+      "sources": [
+        "S05",
+        "S20"
+      ],
+      "evidence_paths": [
+        "src/gravity_witness/constraints.py",
+        "tests/test_constraints.py",
+        "results/cycle02/constraints.json"
+      ],
+      "limitations": "A geometry fact; no preparation, shielding, material or electrodynamics claim; sigma=R is impossible in this exact setup."
+    },
+    {
+      "id": "GW-C014",
+      "status": "MODEL_EXTENSION_NUMERICALLY_CHECKED",
+      "claim": "Uniform solid spheres convolved with the same Gaussian preserve negative DP initial-PPT slope for tested non-overlapping R/sigma values",
+      "sources": [
+        "S05"
+      ],
+      "evidence_paths": [
+        "src/gravity_witness/constraints.py",
+        "tests/test_constraints.py",
+        "results/cycle02/constraints.json"
+      ],
+      "limitations": "Same static H=0, rigid COM branches, Gaussian kernel; omits mechanical and environmental dynamics; not a new general DP viability result."
+    },
+    {
+      "id": "GW-C015",
+      "status": "DERIVED_WITH_ENGINEERING_ASSUMPTIONS",
+      "claim": "For an ideal zero-thickness Faraday shield at the closest surface gap, Q=2L/(d-2R)>2/3 for the exact example",
+      "sources": [
+        "S20"
+      ],
+      "evidence_paths": [
+        "src/gravity_witness/constraints.py",
+        "results/cycle02/constraints.json",
+        "figures/cycle02/shield_ratio.png"
+      ],
+      "limitations": "Faraday shield necessity and qualitative Q<<1 are paper arguments, not absolute no-go or measured decoherence; actual screen/dipole noise not calculated."
+    },
+    {
+      "id": "GW-C016",
+      "status": "ANALYTICALLY_DERIVED_AND_NUMERICALLY_TESTED",
+      "claim": "For the particular Gaussian softened point-pair potential, F/FN is ~0.004855 at the minimum branch centre gap and ~0.011323 at mean separation",
+      "sources": [
+        "S05",
+        "S20",
+        "S25"
+      ],
+      "evidence_paths": [
+        "src/gravity_witness/constraints.py",
+        "tests/test_constraints.py",
+        "figures/cycle02/conditional_force.png"
+      ],
+      "limitations": "Not an experiment-specific inverse-square-law exclusion; torsion-balance convolution/uncertainties required."
+    },
+    {
+      "id": "GW-C017",
+      "status": "SOURCE_VERIFIED_CONDITIONAL",
+      "claim": "XENONnT 2026 reports R0>4.5e-10 m at 95% CL for its specified Markovian DP model; this alone does not exclude illustrative sigma of micrometres",
+      "sources": [
+        "S23",
+        "S27"
+      ],
+      "evidence_paths": [
+        "notes/cycle02_constraints.md",
+        "results/cycle02/constraints.json"
+      ],
+      "limitations": "Requires mapping Gaussian sigma and nuclear/electronic assumptions; upper bound in S27 is conditional macroscopic-classicality criterion."
+    },
+    {
+      "id": "GW-C018",
+      "status": "SOURCE_EQUATION_REPRODUCED",
+      "claim": "Single-body Gaussian DP heating scales as G*hbar*m/(4*sqrt(pi)*sigma^3), so micrometre sigma gives tiny intrinsic heating in the point-mass formula",
+      "sources": [
+        "S24",
+        "S26"
+      ],
+      "evidence_paths": [
+        "src/gravity_witness/constraints.py",
+        "tests/test_constraints.py",
+        "results/cycle02/constraints.json"
+      ],
+      "limitations": "Not full many-constituent noise or thermal decoherence, no claim experiment viable."
+    }
+  ]
+}

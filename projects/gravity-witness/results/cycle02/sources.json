@@ -1,0 +1,55 @@
+{
+  "cycle": "02",
+  "registry_extension": true,
+  "sources": [
+    {
+      "id": "S23",
+      "title": "Challenging Spontaneous Quantum Collapse with the XENONnT Dark Matter Detector",
+      "authors": "XENONnT Collaboration",
+      "year": 2026,
+      "primary_url": "https://doi.org/10.1103/2jm3-4976",
+      "doi": "10.1103/2jm3-4976",
+      "audit_depth": "Full published text read including 95% CL lower R0>4.5e-10 m; Markovian DP and matching of sigma normalization explicitly qualified",
+      "status": "published; model-conditional bound"
+    },
+    {
+      "id": "S24",
+      "title": "Gravity-related collapse of the wave function and spontaneous heating: revisiting the experimental bounds",
+      "authors": "Vinante and Ulbricht",
+      "year": 2021,
+      "primary_url": "https://eprints.soton.ac.uk/456167/1/2109.14980.pdf",
+      "audit_depth": "Extracted and reproduced Gaussian DP heating equation (1), not many-body thermal analysis",
+      "status": "published"
+    },
+    {
+      "id": "S25",
+      "title": "New Test of the Gravitational 1/r^2 Law at Separations down to 52 um",
+      "authors": "Lee et al.",
+      "year": 2020,
+      "doi": "10.1103/PhysRevLett.124.101101",
+      "primary_url": "https://pubmed.ncbi.nlm.nih.gov/32216404/",
+      "audit_depth": "Read experimental setup and abstract, 52um minimum detector-attractor gap, Yukawa bound; not convolved Gaussian kernel through torsion-balance geometry",
+      "status": "published"
+    },
+    {
+      "id": "S26",
+      "title": "Diffusion minimization via optimal smearing in collapse and hybrid classical-quantum gravitational models",
+      "authors": "Piccione et al.",
+      "year": 2026,
+      "doi": "10.1103/h74z-zvfv",
+      "primary_url": "https://doi.org/10.1103/h74z-zvfv",
+      "audit_depth": "Published abstract only; Gaussian not minimum DP heating; no competing kernel implemented",
+      "status": "published; alternative model caution"
+    },
+    {
+      "id": "S27",
+      "title": "On the effectiveness of the collapse in the Diósi–Penrose model",
+      "authors": "Figurato et al.",
+      "year": 2024,
+      "doi": "10.1088/1367-2630/ad8c77",
+      "primary_url": "https://doi.org/10.1088/1367-2630/ad8c77",
+      "audit_depth": "Abstract plus physical status distinction; conditional classicality upper ~1e-4m NOT a lab exclusion",
+      "status": "published; assumption-dependent upper proposal"
+    }
+  ]
+}
