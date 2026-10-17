@@ -1,5 +1,7 @@
 # PhysicsResearch
 
+**Research observatory:** [Dashboard setup & Vercel deployment](dashboard/README.md) — an illustrated progress display built from the committed Cycle 01 evidence. The full research program and commands remain below.
+
 ### An attempt at breakthrough physics with frontier AI
 
 A research workspace directed by **Dion Hinchcliffe**. Its first program, **Project Gravity Witness**, asks which experimental measurements could distinguish low-energy quantum-gravity predictions from precisely specified classical or hybrid alternatives.
